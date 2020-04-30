@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 
+var things = require('./things.js');
+
 app.get('/hello', (req, res) => {
     res.send("Hello, world!");
 });
@@ -12,5 +14,7 @@ app.post('/hello', (req, res) => {
 app.all('/test', (req, res) => {
     res.send("HTTP method doesnt have any effect on this route!");
 });
+
+app.use('/things', things);
 
 app.listen(3000);
