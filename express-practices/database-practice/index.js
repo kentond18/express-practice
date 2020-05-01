@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/my_db');
 
 app.set('view engine', 'pug');
-app.set('views', '/views');
+app.set('views', './views');
 
 var personSchema = mongoose.Schema({
     name: String,
