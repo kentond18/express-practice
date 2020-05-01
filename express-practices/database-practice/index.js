@@ -3,6 +3,9 @@ const app = express();
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/my_db');
 
+app.set('view engling', 'pug');
+app.set('views', '/views');
+
 var personSchema = mongoose.Schema({
     name: String,
     age: Number,
